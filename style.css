@@ -35,10 +35,44 @@ body {
   height: 72px;
 }
 
+/* En tu archivo style.css */
+
 .cabecalho-menu {
+  /* Estilos para pantallas grandes */
   display: flex;
-  gap: 32px;
+  justify-content: space-between;
 }
+
+@media (max-width: 768px) {
+  .cabecalho-menu {
+    /* Estilos para pantallas pequeñas */
+    flex-direction: column;
+    
+  }
+  .cabecalho-menu-item {
+    margin: 5px 0;
+  }
+  .conteudo-principal {
+    flex-direction: column-reverse; /* Invierte el orden de la imagen y el texto */
+    
+  }
+  .conteudo-principal-imagem {
+    width: 50%; 
+  }
+  .conteudo-principal-escrito {
+    display: grid;
+    place-items: center;
+  }
+
+  
+}  
+
+.boton-contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 
 .cabecalho-menu-item {
   font-family: 'Sarala', sans-serif;
@@ -62,7 +96,8 @@ body {
 .conteudo-principal-escrito {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  align-items: center;
+  justify-content: center;
 }
 
 .conteudo-principal-escrito-titulo {
